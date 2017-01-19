@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Synthesizer</string>
-    <string name="button1">First Button</string>string>
+    <string name="button1">First Button</string>
+    <string name="button2">Second Button</string>
 </resources>
