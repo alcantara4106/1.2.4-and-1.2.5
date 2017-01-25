@@ -1,6 +1,6 @@
 package com.example.alcantara94106.synthesizer;
 
-import android.support.v7.app.ActionBarActivity;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,21 +9,29 @@ import android.widget.Button;
 
 public class SynthesizerActivity extends AppCompatActivity {
     private static final String TAG = SynthesizerActivity.class.getName();
-    private Button button1;
+    private Button mEButton;
     private Button button2;
+    private MediaPlayer mpE;
+    private MediaPlayer mpF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_synthesizer);
 
-        button1 = (Button)findViewById(R.id.button1);
-        button2 = (Button)findViewById(R.id.button2);
-        super.onCreate(savedInstanceState);
+        mEButton = (Button)findViewById(R.id.eButton);
+        button2 = (Button)findViewById(R.id.fButton);
+        mpE = MediaPlayer.create(this, R.raw.scalee);
+        mpF = MediaPlayer.create(this, R.raw.scalef);
     }
-    public void onButton1Click(View thing){
-        Log.i(TAG, "Button 1 Clicked");
+    public void onEButtonClick(View thing){
+        mpE.seekTo(0);
+        Log.i(TAG, "Button E Clicked");
+        mpE.start();
     }
-    public void onButton2Click(View thing){
-        Log.i(TAG, "Button 2 Clicked");
+    public void onFButtonClick(View thing){
+        mpF.seekTo(0);
+        Log.i(TAG, "Button F Clicked");
+        mpF.start();
     }
 }
