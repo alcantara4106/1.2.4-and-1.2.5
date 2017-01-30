@@ -10,7 +10,7 @@ import android.widget.Button;
 public class SynthesizerActivity extends AppCompatActivity {
     private static final String TAG = SynthesizerActivity.class.getName();
     private Button mEButton;
-    private Button button2;
+    private Button mFButton;
     private MediaPlayer mpE;
     private MediaPlayer mpF;
     @Override
@@ -20,16 +20,16 @@ public class SynthesizerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_synthesizer);
 
         mEButton = (Button)findViewById(R.id.eButton);
-        button2 = (Button)findViewById(R.id.fButton);
+        mFButton = (Button)findViewById(R.id.fButton);
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
     }
-    public void onEButtonClick(View thing){
+    public void onEButtonClick(View v){
         mpE.seekTo(0);
         Log.i(TAG, "Button E Clicked");
         mpE.start();
     }
-    public void onFButtonClick(View thing){
+    public void onFButtonClick(View v){
         mpF.seekTo(0);
         Log.i(TAG, "Button F Clicked");
         mpF.start();
