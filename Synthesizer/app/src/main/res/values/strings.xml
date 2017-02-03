@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">Synthesizer</string>
     <string name="howdy">waddup man</string>
+    <string name="aButton">A</string>
+    <string name="bButton">B</string>
+    <string name="bbButton">BB gun</string>
+    <string name="cButton">C</string>
+    <string name="csButton">CSi</string>
+    <string name="dButton">D</string>
+    <string name="dsButton">nintendo DS</string>
     <string name="eButton">E</string>
     <string name="fButton">F</string>
+    <string name="fsButton">FS</string>
+    <string name="gButton">G</string>
+    <string name="gsButton">GS</string>
+    <string name="higheButton">HIGH E</string>
+    <string name="highfButton">HIGH F</string>
+    <string name="highfsButton">HIGH FS</string>
+    <string name="highgButton">HIGH G</string>
 </resources>

@@ -22,8 +22,35 @@
     android:text="@string/eButton"
     android:id="@+id/eButton"
         android:onClick="onEButtonClick"
-        android:layout_marginStart="12dp"
-        android:layout_below="@+id/howdy"
+        android:layout_marginBottom="47dp"
+        android:layout_alignBottom="@+id/fButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/bbButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbButton"
+        android:onClick="onBBButtonClick (SynthesizerActivity)"
+        android:layout_above="@+id/cButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/bButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bButton"
+        android:onClick="onBButtonClick (SynthesizerActivity)"
+        android:layout_above="@+id/bbButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/aButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aButton"
+        android:onClick="onAButtonClick (SynthesizerActivity)"
+        android:layout_above="@+id/bButton"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -32,6 +59,111 @@
         android:layout_height="wrap_content"
         android:id="@+id/fButton"
         android:onClick="onFButtonClick"
-        android:layout_below="@+id/eButton"
-        android:layout_alignStart="@+id/eButton" />
+        android:layout_marginBottom="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/gButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gButton"
+        android:onClick="onGButtonClick (SynthesizerActivity)"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/fsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fsButton"
+        android:onClick="onDSButtonClick (SynthesizerActivity)"
+        android:layout_marginStart="11dp"
+        android:layout_alignBaseline="@+id/fButton"
+        android:layout_alignBottom="@+id/fButton"
+        android:layout_toEndOf="@+id/eButton" />
+
+    <Button
+        android:text="@string/gsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gsButton"
+        android:onClick="onGSButtonClick (SynthesizerActivity)"
+        android:layout_alignStart="@+id/fsButton"
+        android:layout_alignTop="@+id/gButton" />
+
+    <Button
+        android:text="@string/dButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dButton"
+        android:onClick="onDButtonClick (SynthesizerActivity)"
+        android:layout_above="@+id/eButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/dsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dsButton"
+        android:onClick="onDSButtonClick (SynthesizerActivity)"
+        android:layout_alignBaseline="@+id/dButton"
+        android:layout_alignBottom="@+id/dButton"
+        android:layout_alignStart="@+id/fsButton" />
+
+    <Button
+        android:text="@string/csButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/csButton"
+        android:onClick="onCSButtonClick (SynthesizerActivity)"
+        android:layout_above="@+id/dsButton"
+        android:layout_alignStart="@+id/dsButton" />
+
+    <Button
+        android:text="@string/cButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cButton"
+        android:onClick="onCButtonClick (SynthesizerActivity)"
+        android:layout_alignBaseline="@+id/csButton"
+        android:layout_alignBottom="@+id/csButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highgButton"
+        android:id="@+id/highgButton"
+        android:onClick="onHighGButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/higheButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/higheButton"
+        android:onClick="onHighEButtonClick (SynthesizerActivity)"
+        android:layout_above="@+id/highfButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/highfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/highfButton"
+        android:onClick="onHighFButtonClick (SynthesizerActivity)"
+        android:layout_below="@+id/dsButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highfsButton"
+        android:id="@+id/highfsButton"
+        android:onClick="onHighFSButtonClick"
+        android:layout_alignBaseline="@+id/fsButton"
+        android:layout_alignBottom="@+id/fsButton"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
