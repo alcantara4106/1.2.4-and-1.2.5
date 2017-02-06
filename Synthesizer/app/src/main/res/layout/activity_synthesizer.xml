@@ -168,4 +168,22 @@
         android:layout_alignBottom="@+id/fsButton"
         android:layout_alignParentEnd="true"
         tools:ignore="RelativeOverlap" />
+
+    <Button
+        android:text="@string/challenge1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bButton"
+        android:layout_alignEnd="@+id/dsButton"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/challenge1Button"
+        android:onClick="onChallenge1Click" />
+
+    <Button
+        android:text="@string/challenge3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bbButton"
+        android:layout_alignStart="@+id/challenge1Button"
+        android:id="@+id/challenge3Button" />
 </RelativeLayout>

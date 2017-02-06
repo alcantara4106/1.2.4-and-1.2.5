@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Synthesizer</string>
     <string name="howdy">waddup man</string>
+    <string name="challenge1Button">Challenge 1</string>
+    <string name="challenge3Button">Challenge 3</string>
+
     <string name="aButton">A</string>
     <string name="bButton">B</string>
     <string name="bbButton">BB gun</string>
