@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class SynthesizerActivity extends AppCompatActivity {
+    private final int WHOLE_NOTE = 1000;
     private static final String TAG = SynthesizerActivity.class.getName();
     private Button mAButton;
     private Button mBButton;
@@ -42,6 +43,9 @@ public class SynthesizerActivity extends AppCompatActivity {
     private MediaPlayer mpHighFS;
     private MediaPlayer mpHighG;
 
+    private Button mChallenge1;
+    private Button mChallenge3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -50,6 +54,8 @@ public class SynthesizerActivity extends AppCompatActivity {
 
         mEButton = (Button)findViewById(R.id.eButton);
         mFButton = (Button)findViewById(R.id.fButton);
+        mChallenge1 = (Button)findViewById(R.id.challenge1Button);
+        mChallenge3 = (Button)findViewById(R.id.challenge3Button);
 
         mpA = MediaPlayer.create(this, R.raw.scalea);
         mpB = MediaPlayer.create(this, R.raw.scaleb);
@@ -68,6 +74,94 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpHighFS = MediaPlayer.create(this, R.raw.scalehighfs);
         mpHighG = MediaPlayer.create(this, R.raw.scalehighg);
     }
+
+    private void delayPlaying(int delay) throws InterruptedException{
+        try{
+            Thread.sleep(delay);
+        } catch(InterruptedException e) {
+            Log.e("SynthesizerActivity","Audio playback interrupted");
+        }
+    }
+
+    public void onChallenge1Click(View v){
+        Log.i(TAG, "Challenge1 Clicked"); //plays E, F Sharp, G, A, B, C Sharp, D, E
+        try{
+            mpE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpFS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpG.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpB.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpCS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpD.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpE.start();
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public void onChallenge3Click(){
+        Log.i(TAG, "Challenge3 Clicked");//plays E, F Sharp, G, A, B, C Sharp, D, E
+        MediaPlayer[] MediaPlayers;
+        MediaPlayers = {mpE,mpFS,mpG,mpA,mpB,mpCS,mpD,mpE};
+        for(MediaPlayer mpthing: MediaPlayers){
+            try {
+                mpthing.start();
+                delayPlaying(WHOLE_NOTE/2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void onChallenge5Click(View v){
+        Log.i(TAG, "Challenge1 Clicked");
+        //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
+        try{
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighFS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighFS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpD.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpD.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpCS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpCS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpB.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpB.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+
+    }
+
+
 
     public void onAButtonClick(View v){
         mpA.seekTo(0);

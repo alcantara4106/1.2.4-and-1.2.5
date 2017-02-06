@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bbButton"
-        android:onClick="onBBButtonClick (SynthesizerActivity)"
+        android:onClick="onBBButtonClick"
         android:layout_above="@+id/cButton"
         android:layout_alignParentStart="true" />
 
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bButton"
-        android:onClick="onBButtonClick (SynthesizerActivity)"
+        android:onClick="onBButtonClick"
         android:layout_above="@+id/bbButton"
         android:layout_alignParentStart="true" />
 
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/aButton"
-        android:onClick="onAButtonClick (SynthesizerActivity)"
+        android:onClick="onAButtonClick"
         android:layout_above="@+id/bButton"
         android:layout_alignParentStart="true" />
 
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gButton"
-        android:onClick="onGButtonClick (SynthesizerActivity)"
+        android:onClick="onGButtonClick"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
@@ -77,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fsButton"
-        android:onClick="onDSButtonClick (SynthesizerActivity)"
+        android:onClick="onFSButtonClick"
         android:layout_marginStart="11dp"
         android:layout_alignBaseline="@+id/fButton"
         android:layout_alignBottom="@+id/fButton"
@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gsButton"
-        android:onClick="onGSButtonClick (SynthesizerActivity)"
+        android:onClick="onGSButtonClick"
         android:layout_alignStart="@+id/fsButton"
         android:layout_alignTop="@+id/gButton" />
 
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dButton"
-        android:onClick="onDButtonClick (SynthesizerActivity)"
+        android:onClick="onDButtonClick"
         android:layout_above="@+id/eButton"
         android:layout_alignParentStart="true" />
 
@@ -106,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dsButton"
-        android:onClick="onDSButtonClick (SynthesizerActivity)"
+        android:onClick="onDSButtonClick"
         android:layout_alignBaseline="@+id/dButton"
         android:layout_alignBottom="@+id/dButton"
         android:layout_alignStart="@+id/fsButton" />
@@ -116,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/csButton"
-        android:onClick="onCSButtonClick (SynthesizerActivity)"
+        android:onClick="onCSButtonClick"
         android:layout_above="@+id/dsButton"
         android:layout_alignStart="@+id/dsButton" />
 
@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cButton"
-        android:onClick="onCButtonClick (SynthesizerActivity)"
+        android:onClick="onCButtonClick"
         android:layout_alignBaseline="@+id/csButton"
         android:layout_alignBottom="@+id/csButton"
         android:layout_alignParentStart="true" />
@@ -137,14 +137,15 @@
         android:id="@+id/highgButton"
         android:onClick="onHighGButtonClick"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap" />
 
     <Button
         android:text="@string/higheButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/higheButton"
-        android:onClick="onHighEButtonClick (SynthesizerActivity)"
+        android:onClick="onHighEButtonClick"
         android:layout_above="@+id/highfButton"
         android:layout_alignParentEnd="true" />
 
@@ -153,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/highfButton"
-        android:onClick="onHighFButtonClick (SynthesizerActivity)"
+        android:onClick="onHighFButtonClick"
         android:layout_below="@+id/dsButton"
         android:layout_alignParentEnd="true" />
 
@@ -165,5 +166,24 @@
         android:onClick="onHighFSButtonClick"
         android:layout_alignBaseline="@+id/fsButton"
         android:layout_alignBottom="@+id/fsButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="RelativeOverlap" />
+
+    <Button
+        android:text="@string/challenge1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bButton"
+        android:layout_alignEnd="@+id/dsButton"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/challenge1Button"
+        android:onClick="onChallenge1Click" />
+
+    <Button
+        android:text="@string/challenge3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bbButton"
+        android:layout_alignStart="@+id/challenge1Button"
+        android:id="@+id/challenge3Button" />
 </RelativeLayout>
