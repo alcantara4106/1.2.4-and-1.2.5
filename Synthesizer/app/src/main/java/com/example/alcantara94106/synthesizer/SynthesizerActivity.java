@@ -86,20 +86,28 @@ public class SynthesizerActivity extends AppCompatActivity {
     public void onChallenge1Click(View v){
         Log.i(TAG, "Challenge1 Clicked"); //plays E, F Sharp, G, A, B, C Sharp, D, E
         try{
+            mpE.seekTo(0);
             mpE.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpFS.seekTo(0);
             mpFS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpG.seekTo(0);
             mpG.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpA.seekTo(0);
             mpA.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpB.seekTo(0);
             mpB.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpCS.seekTo(0);
             mpCS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpD.seekTo(0);
             mpD.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpE.seekTo(0);
             mpE.start();
         }
         catch(InterruptedException e){
@@ -108,12 +116,13 @@ public class SynthesizerActivity extends AppCompatActivity {
 
     }
 
-    public void onChallenge3Click(){
+    public void onChallenge3Click(View v){
         Log.i(TAG, "Challenge3 Clicked");//plays E, F Sharp, G, A, B, C Sharp, D, E
         MediaPlayer[] MediaPlayers;
-        MediaPlayers = {mpE,mpFS,mpG,mpA,mpB,mpCS,mpD,mpE};
+        MediaPlayers = new MediaPlayer[]{mpE, mpFS, mpG, mpA, mpB, mpCS, mpD, mpE};
         for(MediaPlayer mpthing: MediaPlayers){
             try {
+                mpthing.seekTo(0);
                 mpthing.start();
                 delayPlaying(WHOLE_NOTE/2);
             } catch (InterruptedException e) {
@@ -122,37 +131,50 @@ public class SynthesizerActivity extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
     public void onChallenge5Click(View v){
-        Log.i(TAG, "Challenge1 Clicked");
+        Log.i(TAG, "Challenge5 Clicked");
         //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
         try{
+            mpA.seekTo(0);
             mpA.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpA.seekTo(0);
             mpA.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpHighE.seekTo(0);
             mpHighE.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpHighE.seekTo(0);
             mpHighE.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpHighFS.seekTo(0);
             mpHighFS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpHighFS.seekTo(0);
             mpHighFS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpHighE.seekTo(0);
             mpHighE.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpD.seekTo(0);
             mpD.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpD.seekTo(0);
             mpD.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpCS.seekTo(0);
             mpCS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpCS.seekTo(0);
             mpCS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpB.seekTo(0);
             mpB.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpB.seekTo(0);
             mpB.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpA.seekTo(0);
             mpA.start();
             delayPlaying(WHOLE_NOTE/2);
         }
@@ -162,10 +184,24 @@ public class SynthesizerActivity extends AppCompatActivity {
 
     }
 
+    public void onChallenge7Click(View v){
+        Log.i(TAG, "Challenge7 Clicked");
+        //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
+        MediaPlayer[] MediaPlayers;
+        MediaPlayers = new MediaPlayer[]{};
+        for(MediaPlayer mpthing: MediaPlayers){
+            try {
+                mpthing.seekTo(0);
+                mpthing.start();
+                delayPlaying(WHOLE_NOTE/2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
-=======
->>>>>>> origin/master
+
     public void onAButtonClick(View v){
         mpA.seekTo(0);
         Log.i(TAG, "Button A Clicked");

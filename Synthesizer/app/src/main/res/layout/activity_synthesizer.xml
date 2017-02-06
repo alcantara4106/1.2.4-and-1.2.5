@@ -183,7 +183,19 @@
         android:text="@string/challenge3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/challenge3Button"
         android:layout_above="@+id/bbButton"
         android:layout_alignStart="@+id/challenge1Button"
-        android:id="@+id/challenge3Button" />
+        android:layout_marginBottom="23dp"
+        android:onClick="onChallenge3Click" />
+
+    <Button
+        android:text="@string/challenge5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/csButton"
+        android:layout_alignStart="@+id/csButton"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/challenge5Button"
+        android:onClick="onChallenge5Click" />
 </RelativeLayout>
