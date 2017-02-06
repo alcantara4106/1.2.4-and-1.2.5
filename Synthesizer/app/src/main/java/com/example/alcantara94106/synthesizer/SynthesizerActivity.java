@@ -122,6 +122,7 @@ public class SynthesizerActivity extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
     public void onChallenge5Click(View v){
         Log.i(TAG, "Challenge1 Clicked");
         //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
@@ -163,6 +164,8 @@ public class SynthesizerActivity extends AppCompatActivity {
 
 
 
+=======
+>>>>>>> origin/master
     public void onAButtonClick(View v){
         mpA.seekTo(0);
         Log.i(TAG, "Button A Clicked");
