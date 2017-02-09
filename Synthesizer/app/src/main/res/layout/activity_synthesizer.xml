@@ -173,17 +173,54 @@
         android:text="@string/challenge1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bButton"
-        android:layout_alignEnd="@+id/dsButton"
-        android:layout_marginBottom="20dp"
         android:id="@+id/challenge1Button"
-        android:onClick="onChallenge1Click" />
+        android:onClick="onChallenge1Click"
+        android:layout_below="@+id/howdy"
+        android:layout_alignStart="@+id/challenge5Button" />
 
     <Button
         android:text="@string/challenge3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bbButton"
-        android:layout_alignStart="@+id/challenge1Button"
-        android:id="@+id/challenge3Button" />
+        android:id="@+id/challenge3Button"
+        android:onClick="onChallenge3Click"
+        android:layout_below="@+id/challenge1Button"
+        android:layout_alignStart="@+id/challenge1Button" />
+
+    <Button
+        android:text="@string/challenge5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/challenge5Button"
+        android:onClick="onChallenge5Click"
+        android:layout_below="@+id/challenge3Button"
+        android:layout_alignStart="@+id/csButton" />
+
+    <Button
+        android:text="@string/challenge8Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/challenge5Button"
+        android:layout_alignStart="@+id/csButton"
+        android:id="@+id/challenge8Button"
+        android:onClick="onChallenge8Click" />
+
+    <Button
+        android:text="@string/challenge9Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/challenge1Button"
+        android:layout_toEndOf="@+id/dsButton"
+        android:id="@+id/button2"
+        android:onClick="onChallenge9Click" />
+
+    <Button
+        android:text="@string/pageSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/challenge3Button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/pageSwitch"
+        android:onClick="onPageSwitchButtonClick" />
 </RelativeLayout>

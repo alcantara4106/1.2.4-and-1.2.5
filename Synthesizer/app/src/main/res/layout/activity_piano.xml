@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alcantara94106.synthesizer.PianoActivity">
+
+    <TextView
+        android:text="@string/alive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+
+    <Button
+        android:text="@string/gsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gsButton"
+        android:onClick="onGSButtonClick"
+        android:layout_alignStart="@+id/fsButton"
+        android:layout_alignTop="@+id/gButton" />
+
+    <Button
+        android:text="@string/aButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aButton"
+        android:onClick="onAButtonClick"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/bButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bButton"
+        android:onClick="onBButtonClick"
+        android:layout_below="@+id/aButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/cButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cButton"
+        android:onClick="onCButtonClick"
+        android:layout_below="@+id/bButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/dButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dButton"
+        android:onClick="onDButtonClick"
+        android:layout_below="@+id/cButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eButton"
+        android:id="@+id/eButton"
+        android:onClick="onEButtonClick"
+        android:layout_below="@+id/dsButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/fButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fButton"
+        android:onClick="onFButtonClick"
+        android:layout_below="@+id/highfButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/gButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gButton"
+        android:onClick="onGButtonClick"
+        android:layout_below="@+id/fButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/pageSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pageSwitch"
+        android:onClick="onPageSwitchButtonClick"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/csButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/csButton"
+        android:onClick="onCSButtonClick"
+        android:layout_below="@+id/bbButton"
+        android:layout_alignStart="@+id/bbButton" />
+
+    <Button
+        android:text="@string/dsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dsButton"
+        android:onClick="onDSButtonClick"
+        android:layout_below="@+id/csButton"
+        android:layout_alignEnd="@+id/csButton" />
+
+    <Button
+        android:text="@string/fsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fsButton"
+        android:onClick="onFSButtonClick"
+        android:layout_alignBaseline="@+id/highfsButton"
+        android:layout_alignBottom="@+id/highfsButton"
+        android:layout_alignEnd="@+id/dsButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highfsButton"
+        android:id="@+id/highfsButton"
+        android:onClick="onHighFSButtonClick"
+        tools:ignore="RelativeOverlap"
+        android:layout_below="@+id/highfButton"
+        android:layout_alignStart="@+id/highgButton" />
+
+
+    <Button
+        android:text="@string/highfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/highfButton"
+        android:onClick="onHighFButtonClick"
+        android:layout_below="@+id/dsButton"
+        android:layout_alignStart="@+id/highfsButton" />
+
+    <Button
+        android:text="@string/clearSequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearSequence"
+        android:onClick="clearSequence"
+        android:layout_below="@+id/gButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:text="@string/playSequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playSequence"
+        android:onClick="playSequence"
+        android:layout_alignBaseline="@+id/clearSequence"
+        android:layout_alignBottom="@+id/clearSequence"
+        android:layout_toEndOf="@+id/clearSequence" />
+
+    <Button
+        android:text="@string/bbButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbButton"
+        android:onClick="onBBButtonClick"
+        android:layout_alignBaseline="@+id/bButton"
+        android:layout_alignBottom="@+id/bButton"
+        android:layout_toEndOf="@+id/bButton"
+        android:layout_marginStart="32dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highgButton"
+        android:id="@+id/highgButton"
+        android:onClick="onHighGButtonClick"
+        tools:ignore="RelativeOverlap"
+        android:layout_below="@+id/highfsButton"
+        android:layout_toEndOf="@+id/gsButton"
+        android:layout_marginStart="38dp" />
+
+    <Button
+        android:text="@string/higheButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/higheButton"
+        android:onClick="onHighEButtonClick"
+        android:layout_above="@+id/highfButton"
+        android:layout_alignStart="@+id/highfButton" />
+</RelativeLayout>

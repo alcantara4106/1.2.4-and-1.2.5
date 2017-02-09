@@ -1,5 +1,6 @@
 package com.example.alcantara94106.synthesizer;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -86,21 +87,96 @@ public class SynthesizerActivity extends AppCompatActivity {
     public void onChallenge1Click(View v){
         Log.i(TAG, "Challenge1 Clicked"); //plays E, F Sharp, G, A, B, C Sharp, D, E
         try{
+            mpE.seekTo(0);
             mpE.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpFS.seekTo(0);
             mpFS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpG.seekTo(0);
             mpG.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpA.seekTo(0);
             mpA.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpB.seekTo(0);
             mpB.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpCS.seekTo(0);
             mpCS.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpD.seekTo(0);
             mpD.start();
             delayPlaying(WHOLE_NOTE/2);
+            mpE.seekTo(0);
             mpE.start();
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void onChallenge3Click(View v){
+        Log.i(TAG, "Challenge3 Clicked");//plays E, F Sharp, G, A, B, C Sharp, D, E
+        MediaPlayer[] MediaPlayers;
+        MediaPlayers = new MediaPlayer[]{mpE, mpFS, mpG, mpA, mpB, mpCS, mpD, mpE};
+        for(MediaPlayer mpthing: MediaPlayers){
+            try {
+                mpthing.seekTo(0);
+                mpthing.start();
+                delayPlaying(WHOLE_NOTE/2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void onChallenge5Click(View v){
+        Log.i(TAG, "Challenge5 Clicked");
+        //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
+        try{
+            mpA.seekTo(0);
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpA.seekTo(0);
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighE.seekTo(0);
+            mpHighE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighE.seekTo(0);
+            mpHighE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighFS.seekTo(0);
+            mpHighFS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighFS.seekTo(0);
+            mpHighFS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpHighE.seekTo(0);
+            mpHighE.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpD.seekTo(0);
+            mpD.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpD.seekTo(0);
+            mpD.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpCS.seekTo(0);
+            mpCS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpCS.seekTo(0);
+            mpCS.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpB.seekTo(0);
+            mpB.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpB.seekTo(0);
+            mpB.start();
+            delayPlaying(WHOLE_NOTE/2);
+            mpA.seekTo(0);
+            mpA.start();
+            delayPlaying(WHOLE_NOTE/2);
         }
         catch(InterruptedException e){
             e.printStackTrace();
@@ -108,18 +184,92 @@ public class SynthesizerActivity extends AppCompatActivity {
 
     }
 
-    public void onChallenge3Click(){
-        Log.i(TAG, "Challenge3 Clicked");//plays E, F Sharp, G, A, B, C Sharp, D, E
+    public void onChallenge8Click(View v){
+        Log.i(TAG, "Challenge8 Clicked");
+        //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
         MediaPlayer[] MediaPlayers;
-        MediaPlayers = {mpE,mpFS,mpG,mpA,mpB,mpCS,mpD,mpE};
+        MediaPlayers = new MediaPlayer[]{
+                mpA,
+                mpA,
+                mpHighE,
+                mpHighE,
+                mpHighFS,
+                mpHighFS,
+                mpHighE,
+                mpD,
+                mpD,
+                mpCS,
+                mpCS,
+                mpB,
+                mpB,
+                mpA};
+        int noteNum = 0;
         for(MediaPlayer mpthing: MediaPlayers){
             try {
+                mpthing.seekTo(0);
                 mpthing.start();
-                delayPlaying(WHOLE_NOTE/2);
-            } catch (InterruptedException e) {
+                if(noteNum < 6) {
+                    delayPlaying(WHOLE_NOTE / 2); //quarter note
+                }
+                else if(noteNum == 6) {
+                    delayPlaying(WHOLE_NOTE);
+                }
+                else {
+                    delayPlaying(WHOLE_NOTE / 2);
+                }
+                noteNum += 1;
+            }
+            catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void onChallenge9Click(View v){
+        Log.i(TAG, "Challenge9 Clicked");
+        //plays A, A, High E, High E, High F Sharp, High F Sharp, High E, D, D, C Sharp, C Sharp, B, B, A
+        MediaPlayer[] MediaPlayers;
+        MediaPlayers = new MediaPlayer[]{
+                mpA,mpA,mpHighE,mpHighE,mpHighFS,mpHighFS,mpHighE,
+                mpD,mpD,mpCS,mpCS,mpB,mpB,mpA, //part 1
+                mpHighE,mpHighE,mpD,mpD,mpCS,mpCS,mpB, //part 2
+                mpHighE,mpHighE,mpD,mpD,mpCS,mpCS,mpB, //part 3
+                mpA,mpA,mpHighE,mpHighE,mpHighFS,mpHighFS,mpHighE,
+                mpD,mpD,mpCS,mpCS,mpB,mpB,mpA //part 4
+        };
+        int noteNum = 0; //tracks where the song is, to put the pauses in the right places
+        for(MediaPlayer mpthing: MediaPlayers){
+            try {
+                mpthing.seekTo(0);
+                mpthing.start();
+                switch(noteNum){
+                    case 6: delayPlaying(WHOLE_NOTE);
+                        break;
+                    case 13: delayPlaying(WHOLE_NOTE);
+                        break;
+                    case 20: delayPlaying(WHOLE_NOTE);
+                        break;
+                    case 27: delayPlaying(WHOLE_NOTE);
+                        break;
+                    case 34: delayPlaying(WHOLE_NOTE);
+                        break;
+                    case 41: delayPlaying(WHOLE_NOTE);
+                        break;
+                    default: delayPlaying(WHOLE_NOTE/2);
+                        break;
+                }
+                noteNum += 1;
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void onPageSwitchButtonClick(View v){
+        Log.i(TAG, "Somebody pressed PageSwitch, something's going to blow up");
+        Intent intent = new Intent(this, PianoActivity.class);
+        startActivity(intent);
     }
 
     public void onAButtonClick(View v){
