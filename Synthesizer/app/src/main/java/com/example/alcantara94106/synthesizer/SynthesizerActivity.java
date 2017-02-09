@@ -258,6 +258,22 @@ public class SynthesizerActivity extends AppCompatActivity {
                     default: delayPlaying(WHOLE_NOTE/2);
                         break;
                 }
+<<<<<<< HEAD
+=======
+            /*
+                if(noteNum == 6) {
+                    delayPlaying(WHOLE_NOTE); //quarter note
+                }
+                else if(noteNum == 13) {
+                    delayPlaying(WHOLE_NOTE);
+                }
+                else if(noteNum == 20) {
+                    delayPlaying(WHOLE_NOTE);
+                }
+                else {
+                    delayPlaying(WHOLE_NOTE / 2);
+                }*/
+>>>>>>> origin/master
                 noteNum += 1;
             }
             catch (InterruptedException e) {
@@ -266,12 +282,15 @@ public class SynthesizerActivity extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
     public void onPageSwitchButtonClick(View v){
         Log.i(TAG, "Somebody pressed PageSwitch, something's going to blow up");
         Intent intent = new Intent(this, PianoActivity.class);
         startActivity(intent);
     }
 
+=======
+>>>>>>> origin/master
     public void onAButtonClick(View v){
         mpA.seekTo(0);
         Log.i(TAG, "Button A Clicked");

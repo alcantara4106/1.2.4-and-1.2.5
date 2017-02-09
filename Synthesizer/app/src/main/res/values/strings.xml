@@ -7,12 +7,15 @@
     <string name="challenge5Button">Challenge 5</string>
     <string name="challenge8Button">Challenge 8</string>
     <string name="challenge9Button">Challenge 9</string>
+<<<<<<< HEAD
 
     <string name="pageSwitch">Switch Pages</string>
 
     <string name="addToList">Add to sequence</string>
     <string name="playSequence">Play sequence</string>
     <string name="clearSequence">Clear sequence</string>
+=======
+>>>>>>> origin/master
 
     <string name="aButton">A</string>
     <string name="bButton">B</string>

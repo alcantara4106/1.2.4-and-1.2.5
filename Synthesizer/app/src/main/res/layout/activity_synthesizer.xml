@@ -213,6 +213,7 @@
         android:layout_toEndOf="@+id/dsButton"
         android:id="@+id/button2"
         android:onClick="onChallenge9Click" />
+<<<<<<< HEAD
 
     <Button
         android:text="@string/pageSwitch"
@@ -223,4 +224,6 @@
         android:layout_marginTop="11dp"
         android:id="@+id/pageSwitch"
         android:onClick="onPageSwitchButtonClick" />
+=======
+>>>>>>> origin/master
 </RelativeLayout>
